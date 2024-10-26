@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b872b32325.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="container">
+        <main>
+          <div class="game-board">
+            <div class="player-section player-active">
+              <h1 class="player-title">player 1</h1>
+              <h2 class="cumulative-score">0</h2>
+              <div class="current-score-box">
+                <p class="current-label">current</p>
+                <p class="current-score">0</p>
+              </div>
+            </div>
+            <div class="player-section">
+              <h1 class="player-title">player 2</h1>
+              <h2 class="cumulative-score">0</h2>
+              <div class="current-score-box">
+                <p class="current-label">current</p>
+                <p class="current-score">0</p>
+              </div>
+            </div>
+            <div class="dice">
+              <img src="resources/images/dice-numbers/dice-5.png" />
+            </div>
+            <button class="btn new-game">🔄️ new game</button>
+            <button class="btn roll-dice">🎲 roll dice</button>
+            <button class="btn hold">📥 hold</button>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

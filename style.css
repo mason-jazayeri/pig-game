@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #333;
+}
+
+.page-wrapper {
+  background: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  overflow: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .game-board {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+main .game-board .player-section {
+  width: 50%;
+  padding: 7rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.player-winner {
+  background: #2f2f2f;
+}
+
+main .game-board .player-section .player-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 4rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  padding-bottom: 2rem;
+}
+
+main .game-board .player-active .player-title {
+  font-weight: 700;
+}
+
+main .game-board .player-section .cumulative-score {
+  font-weight: 400;
+  font-size: 8rem;
+  color: #c7365f;
+  padding-bottom: 10rem;
+}
+
+main .game-board .player-section .current-score-box {
+  background-color: #c7365f;
+  color: #fff;
+  opacity: 0.8;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 40%;
+  min-width: 120px;
+}
+main .game-board .player-active .current-score-box {
+  opacity: 1;
+}
+
+main .game-board .player-section .current-score-box .current-label {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  color: #ddd;
+  padding-bottom: 1rem;
+}
+
+main .game-board .player-section .current-score-box .current-score {
+  font-size: 3.5rem;
+}
+
+main .game-board .dice {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  transform: translate(-50%);
+  top: 150px;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+main .game-board .dice img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+main .game-board .btn {
+  border: none;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  color: #444;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 1.8rem;
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  transition: all 150ms ease;
+}
+
+main .game-board .btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+main .game-board .btn::first-letter {
+  font-size: 2.4rem;
+  margin-right: 0.7rem;
+}
+
+main .game-board .new-game {
+  top: 25px;
+}
+
+main .game-board .roll-dice {
+  top: 340px;
+}
+
+main .game-board .hold {
+  top: 420px;
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 30%;
+  }
+
+  main .game-board {
+    height: 400px;
+  }
+
+  main .game-board .player-section {
+    padding: 12rem 0;
+  }
+
+  main .game-board .dice {
+    width: 50px;
+    height: 50px;
+    top: 100px;
+  }
+
+  main .game-board .roll-dice {
+    top: 270px;
+  }
+
+  main .game-board .hold {
+    top: 300px;
+  }
+}
