@@ -16,6 +16,10 @@ body {
   color: #333;
 }
 
+.hidden {
+  display: none;
+}
+
 .page-wrapper {
   background: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
   overflow: auto;
@@ -56,11 +60,11 @@ main .game-board .player-section {
   align-items: center;
 }
 
-.player-active {
+.player-section.player-active {
   background: rgba(255, 255, 255, 0.4);
 }
 
-.player-winner {
+.player-section.player-winner {
   background: #2f2f2f;
 }
 
@@ -73,8 +77,12 @@ main .game-board .player-section .player-title {
   padding-bottom: 2rem;
 }
 
-main .game-board .player-active .player-title {
+main .game-board .player-section.player-active .player-title {
   font-weight: 700;
+}
+
+main .game-board .player-section.player-active.player-winner .player-title {
+  color: #c7365f;
 }
 
 main .game-board .player-section .cumulative-score {
@@ -94,7 +102,7 @@ main .game-board .player-section .current-score-box {
   width: 40%;
   min-width: 120px;
 }
-main .game-board .player-active .current-score-box {
+main .game-board .player-section.player-active .current-score-box {
   opacity: 1;
 }
 
