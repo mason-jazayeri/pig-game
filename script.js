@@ -25,7 +25,6 @@ let currentScorePlayer1 = 0;
 let currentScorePlayer2 = 0;
 let activePlayer = 1;
 let diceNumber;
-console.log(diceNumber);
 
 const startNewGame = () => {
   cumulativeScorePlayer1 = 0;
@@ -104,9 +103,9 @@ const rollDice = () => {
       player1SectionEl.classList.toggle('player-active');
       player2SectionEl.classList.toggle('player-active');
     }
-    console.log(
-      `activePlayer = ${activePlayer}, diceNumber = ${diceNumber}, currentScorePlayer1 = ${currentScorePlayer1}, currentScorePlayer2 = ${currentScorePlayer2}`
-    );
+    // console.log(
+    //   `activePlayer = ${activePlayer}, diceNumber = ${diceNumber}, currentScorePlayer1 = ${currentScorePlayer1}, currentScorePlayer2 = ${currentScorePlayer2}`
+    // );
   }
 };
 
@@ -122,7 +121,6 @@ const holdScore = () => {
       currentScorePlayer1 = 0;
       currentScorePlayer1El.textContent = currentScorePlayer1;
       if (cumulativeScorePlayer1 >= 100) {
-        console.log('Player 1 is the winner.');
         player1SectionEl.classList.add('player-winner');
         diceContainerEl.classList.add('hidden');
         return;
@@ -136,7 +134,6 @@ const holdScore = () => {
       currentScorePlayer2 = 0;
       currentScorePlayer2El.textContent = currentScorePlayer2;
       if (cumulativeScorePlayer2 >= 100) {
-        console.log('Player 2 is the winner.');
         player2SectionEl.classList.add('player-winner');
         diceContainerEl.classList.add('hidden');
         return;
@@ -145,9 +142,9 @@ const holdScore = () => {
       player1SectionEl.classList.toggle('player-active');
       player2SectionEl.classList.toggle('player-active');
     }
-    console.log(
-      `activePlayer = ${activePlayer}, cumulativeScorePlayer1 = ${cumulativeScorePlayer1}, cumulativeScorePlayer2 = ${cumulativeScorePlayer2}`
-    );
+    // console.log(
+    //   `activePlayer = ${activePlayer}, cumulativeScorePlayer1 = ${cumulativeScorePlayer1}, cumulativeScorePlayer2 = ${cumulativeScorePlayer2}`
+    // );
   }
 };
 
